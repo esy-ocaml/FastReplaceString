@@ -1,2 +1,3 @@
 infer-out
-./tests/actual
+tests/actual
+node_modules

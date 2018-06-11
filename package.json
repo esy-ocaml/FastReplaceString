@@ -3,8 +3,16 @@
   "version": "0.0.3",
   "description": "Fast C(++) native replacement of a string in a file. Low startup time makes this great for build scripts.",
   "main": "index.js",
+  "esy": {
+    "build": [
+      [
+        "make",
+        "PREFIX=$cur__install",
+        "build"
+      ]
+    ]
+  },
   "scripts": {
-    "postinstall": "g++ -Ofast -o ./.bin/fastreplacestring.exe ./fastreplacestring.cpp",
     "frs": "./.bin/fastreplacestring.exe",
     "infer": "infer -- g++ -g -o ./.bin/fastreplacestring.exe ./fastreplacestring.cpp",
     "build": "g++ -Ofast -o ./.bin/fastreplacestring.exe ./fastreplacestring.cpp",
@@ -19,7 +27,10 @@
     "fastreplacestring.exe": "./.bin/fastreplacestring.exe"
   },
   "keywords": [
-    "replacestring", "fastreplacestring", "c", "native"
+    "replacestring",
+    "fastreplacestring",
+    "c",
+    "native"
   ],
   "exportedEnvVars": {
     "PATH": {
